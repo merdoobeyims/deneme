@@ -1,4 +1,4 @@
-from Hacking.modules import * 
+from Hacking import hack
 from pyrogram import idle
 from Hacking import app, LOGGER 
 from config import * 
