@@ -1,6 +1,5 @@
-# Ne olmasını bekliyordun ki :) 
 import logging 
-
+from config import API_HASH, API_ID, SESSION_NAME
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
