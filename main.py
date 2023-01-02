@@ -1,10 +1,9 @@
 # Extra olarak modül koymadım ama zamana göre ellbette degişir. 
 
-import os import remove 
+import os, remove 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
 from time import sleep, strftime, gmtime, time
-from Hacking import app
 from os.path import join
 from random import randint
 from config import *
