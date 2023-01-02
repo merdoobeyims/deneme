@@ -1,4 +1,4 @@
-import os, remove 
+from os, remove 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
 from time import sleep, strftime, gmtime, time
