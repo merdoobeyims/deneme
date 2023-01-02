@@ -6,7 +6,7 @@ from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
 from time import sleep, strftime, gmtime, time
 from os.path import join
 from random import randint
-from config import API_ID, API_HASH, SESSION_NAME 
+from config import *
 
 app = Client(config.SESSION_NAME, config.API_ID, config.API_HASH) 
 
