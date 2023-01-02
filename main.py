@@ -7,7 +7,11 @@ from time import sleep, strftime, gmtime, time
 from os.path import join
 from random import randint
 from config import *
-import app
+
+app = Client(config.SESSION_NAME, config.API_ID, config.API_HASH) 
+
+
+
 async def msg_info(msg):
     media_type = ""
     ttl = 0
