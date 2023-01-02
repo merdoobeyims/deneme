@@ -9,7 +9,7 @@ app = Client(
     API_ID,
     API_HASH,
     session_name=SESSION_NAME,
-    plugins=dict(root="Hacking")
+    plugins=dict(root="Hacking/modules")
 )
 
 app.run()
