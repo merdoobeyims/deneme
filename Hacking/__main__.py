@@ -5,5 +5,5 @@ from config import *
 
 LOGGER.info("Bot çalıştı... Hileci herif seni 😂😂😂") 
 
-app.start()
+app.run()
 idle()
