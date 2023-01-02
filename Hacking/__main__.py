@@ -5,13 +5,7 @@ from Hacking.modules import *
 from Hacking import app, LOGGER
  
 
-logging.basicConfig(
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
-)
 
-LOGGER = logging.getLogger(__name__)
-
-app = Client("Timed", api_hash=API_HASH, api_id=API_ID, session_name=SESSION_NAME)
 
 app.start()
 LOGGER.info("Hadi iyisin hileci herif seni 😂😂😂")
