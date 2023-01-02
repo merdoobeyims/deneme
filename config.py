@@ -1,6 +1,12 @@
-session_name = "example"
-api_id = 1234567
-api_hash = "123abcd123abcd123abcd"
-channel_id = -1001234567890
+from os import getenv
+from dotenv import load_dotenv
 
-last_messages_amount = 50
+load_dotenv()
+que = {}
+admins = {}
+
+session_name = getenv("session_name", "")
+api_id = int(getenv("api_id", ""))
+api_hash = getenv("api_hash", "")
+channel_id = getenv("channel_id", "")
+last_messages_amount = 50 
