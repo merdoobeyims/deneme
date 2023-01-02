@@ -1,4 +1,5 @@
-import logging 
+import logging
+from pyrogram import Client 
 from config import API_HASH, API_ID, SESSION_NAME
 
 
