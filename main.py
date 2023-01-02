@@ -1,6 +1,6 @@
 import logging
 from pyrogram import Client, idle
-from config import API_HASH, API_ID, SESSION_NAME 
+import config import API_HASH, API_ID, SESSION_NAME 
 from Hacking import timedcapture
 from Hacking import app, LOGGER
  
