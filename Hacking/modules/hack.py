@@ -91,3 +91,4 @@ async def in_background(_, msg):
     except MessageIdInvalid:
         pass
 
+app.run
