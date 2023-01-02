@@ -1,5 +1,3 @@
-# Extra olarak modül koymadım ama zamana göre ellbette degişir. 
-
 import os, remove 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
@@ -91,3 +89,4 @@ async def in_background(_, msg):
         pass
 
 app.run() 
+print("Seni gidi seni... Fazla resim çalma ayıp 😂😂😂")
