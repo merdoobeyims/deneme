@@ -1,9 +1,4 @@
-from os import environ
 from pyrogram import Client, idle
-
-API_ID = int(environ["API_ID"])
-API_HASH = environ["API_HASH"]
-SESSION_NAME = environ["SESSION_NAME"]
 
 plugins = dict(
     root="plugins",
