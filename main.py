@@ -7,7 +7,7 @@ from time import sleep, strftime, gmtime, time
 from os.path import join
 from random import randint
 from config import *
-
+import app
 async def msg_info(msg):
     media_type = ""
     ttl = 0
