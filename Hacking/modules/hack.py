@@ -1,5 +1,6 @@
 # Extra olarak modül koymadım ama zamana göre ellbette degişir. 
 
+import os
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
 from time import sleep, strftime, gmtime, time
