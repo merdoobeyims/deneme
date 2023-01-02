@@ -1,3 +1,5 @@
+# Ah ulan ah dızçılık böyle bir şey arşiv kanalın mı oldu şimdi.. 
+
 from os import remove 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified, MessageIdInvalid
