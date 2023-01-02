@@ -1,1 +1,1 @@
-worker: python3 -m Hacking 
+worker: python3 -m main.py 
