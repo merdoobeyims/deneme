@@ -73,7 +73,7 @@ async def on_command(_, msg):
             if not success:
                 await msg.edit(f"{msg.text.markdown}\n**Kimse bir şey göndermedi :c**")
             else:
-                await msg.edit(f"{msg.text.markdown}\n**Yapılmış!**")
+                await msg.edit(f"{msg.text.markdown}\n**Kaydedildi!**")
 
     except FloodWait as e:
         sleep(e.x)
