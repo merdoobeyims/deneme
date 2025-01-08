@@ -1,13 +1,49 @@
-import os 
-from os import getenv
-from dotenv import load_dotenv
+from pyrogram import *
+from pyrogram.types import *
+import os
 
-load_dotenv()
-que = {}
-admins = {}
 
-SESSION_NAME = getenv("session_name", "BABVgLqVQc6nzVId22Yps0B69UMmsaeUdkOR-o8XXSA50YD_LKNNIVjsZttkzU7JuP-xejn5_aLQLN_tgopVB8wC3L5y0OTBbTnZnxxkcHh5v4ps7wpasopOrx9kkwfYYfYRd2JnraasozgfftgPSL9w2W7qzydhFxNT46J10uhgECDQQPOeqJqcicQCGRo7N0SLyiW4aAwVNxMV7SucUbzK7ZhwGfTlK0CkbRfTxS_YYQU0T2U0WFUm_IpUCsk2HrK_gO8j32J96trJkNHwPHmeRsDruE_s2lZd0xdWwlITYb_UbHNAadq3bWKsELWvSbAp6hTZgnHJgvXok1ta_DflAAAAAaxmpnYA")
-API_ID = int(getenv("api_id", "28112"))
-API_HASH = getenv("api_hash", "72ac0911ddf53a020560e0dde09650a6")
-CHANNEL_ID = getenv("channel_id", "-100231165")
-last_messages_amount = 90
+# Yazilim calistiginda terminal temizleme fonksiyonu SILME bunu :D
+def sil():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+api_id = 0
+api_hash = ""
+session = ""
+
+app = Client(session_name='bot', api_id=api_id, api_hash=api_hash, session_string=session)
+
+
+@app.on_message(filters.all & filters.private)
+async def sureli_(client, message: Message):
+    user = message.from_user
+    if user.is_bot or user.is_self:
+        return
+    if not message.photo or not message.video:
+        return
+    
+    if message.photo:
+        if not message.photo.ttl_seconds:
+            return
+        caption = message.caption if message.caption else ""
+        media = await message.download()
+        sure = message.photo.ttl_seconds
+    elif message.video:
+        if not message.video.ttl_seconds:
+            return
+        caption = message.caption if message.caption else ""
+        media = await message.download()
+        sure = message.video.ttl_seconds
+    caption += f"\n\n🕒 Sure: {sure} saniye"
+    if message.photo:
+        await client.send_photo('me', media, caption=caption)
+    elif message.video:
+        await client.send_video('me', media, caption=caption)
+    return os.remove(media)
+
+
+
+sil()
+app.start()
+print("Bot Calisiyor")
+idle()
