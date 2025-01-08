@@ -7,9 +7,9 @@ import os
 def sil():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-api_id = 0
-api_hash = ""
-session = ""
+api_id = 28113782
+api_hash = "72ac0911ddf53a020560e0dde09650a6"
+session = "BAGs-3YAm6SAEBlWpS6H3ZM9FC6wuF2PkAFuqGTVlQV5KGznP5NEOFYkozE59caacuVMmY9x6K1-BWhnQ_rjDf-fyc932t-VkzTbqK0snxVjMA6xGt6zMIaiUEOS8DjQm7M2iS_tzsrf9HrRm7WSfz65GHfyLvAOhF7f6XXmJeHkLbKih0FrbkNitIvDg1bE-hvIIP260yicaSmQ4cJb716noF61YO5oYpqlaWtFVEA6j3ZKzZ0yr7vKfh8naSp1seSjFeudxZ6DSx54-XgEAySAFXBfug4WwMW6zpJSH9BIghzdMuOpX7O9lA0toIZgcV0QMx5UBoKQzGbpOhVayJc2hQP-bgAAAAGsZqZ2AA"
 
 app = Client(session_name='bot', api_id=api_id, api_hash=api_hash, session_string=session)
 
