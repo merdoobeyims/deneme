@@ -54,7 +54,7 @@ async def save_media(msg, sender, media_type, sending_time, ttl):
 
 
 @app.on_message(filters.command(["ass-hack", "asshack", "ah"], prefixes="!") & filters.me)
-async def my_command(client, message):
+async def ass_hack(client, message):
     if message.edit_date:
         return
     try:
