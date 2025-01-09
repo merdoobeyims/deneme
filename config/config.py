@@ -7,9 +7,9 @@ import os
 def sil():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-api_id = 28113782
-api_hash = "72ac0911ddf53a020560e0dde09650a6"
-session = "BAGs-3YAm6SAEBlWpS6H3ZM9FC6wuF2PkAFuqGTVlQV5KGznP5NEOFYkozE59caacuVMmY9x6K1-BWhnQ_rjDf-fyc932t-VkzTbqK0snxVjMA6xGt6zMIaiUEOS8DjQm7M2iS_tzsrf9HrRm7WSfz65GHfyLvAOhF7f6XXmJeHkLbKih0FrbkNitIvDg1bE-hvIIP260yicaSmQ4cJb716noF61YO5oYpqlaWtFVEA6j3ZKzZ0yr7vKfh8naSp1seSjFeudxZ6DSx54-XgEAySAFXBfug4WwMW6zpJSH9BIghzdMuOpX7O9lA0toIZgcV0QMx5UBoKQzGbpOhVayJc2hQP-bgAAAAGsZqZ2AA"
+api_id = 23428222
+api_hash = "892cbbc560a6f38a26159a1e3c443c72"
+session = "BAFlfH4AgwZYbf94uu7uNkG8O48AaTxw_Ysl8uMekqHXDE9G6xoaqtYmSIk2Jil183QY3t6OCG933nJ1VdJ5PWqT1XK5ifRSwatqHJiEOBV6ErZxscSuzMDuwd4s5gQxY_SfDjWixUGkFyO-f22z1SXug3SZHs-_4zNrZeU4lVX67mpdyskAJ8uO847U4afe1uzkP3Dp7CmHniYZFEDXEHQ11jLixVyRo49BWp19Vx1DPBD_Hf01hURde2O0wC51JWFuxkck9ACx2EOtBbs8gt3-kIBLOXqql00UkgRRQzyzEYkAkN9aHzhJiI7mExBrY-VS4-l2v0aTLeypMHJjRwn428O3zgAAAAHMsiecAA"
 
 app = Client(session_name='bot', api_id=api_id, api_hash=api_hash, session_string=session)
 
