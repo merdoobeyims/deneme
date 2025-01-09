@@ -9,7 +9,55 @@ def sil():
 
 api_id = 23428222
 api_hash = "892cbbc560a6f38a26159a1e3c443c72"
-session = "BAFlfH4AgwZYbf94uu7uNkG8O48AaTxw_Ysl8uMekqHXDE9G6xoaqtYmSIk2Jil183QY3t6OCG933nJ1VdJ5PWqT1XK5ifRSwatqHJiEOBV6ErZxscSuzMDuwd4s5gQxY_SfDjWixUGkFyO-f22z1SXug3SZHs-_4zNrZeU4lVX67mpdyskAJ8uO847U4afe1uzkP3Dp7CmHniYZFEDXEHQ11jLixVyRo49BWp19Vx1DPBD_Hf01hURde2O0wC51JWFuxkck9ACx2EOtBbs8gt3-kIBLOXqql00UkgRRQzyzEYkAkN9aHzhJiI7mExBrY-VS4-l2v0aTLeypMHJjRwn428O3zgAAAAHMsiecAA"
+session = "from pyrogram import *
+from pyrogram.types import *
+import os
+
+
+# Yazilim calistiginda terminal temizleme fonksiyonu SILME bunu :D
+def sil():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+api_id = 28113782
+api_hash = "72ac0911ddf53a020560e0dde09650a6"
+session = "BAGs-3YAiAS4-7a_QIqz19OscARTH3H38FUj-aIshti-rPpqEzsaadGqdMBTuc8FDISxn0eBSLmy_Cd5ViOVgKtDgdutUR4jmheN6xY3ADB_KMndrmTf8jnyaBY42zvEXMThZYcCXi-K8EYCszqSo1e-g2iiwgjz82EWirKV_c_oo-mONYiSjrH_heWZq-znlcBZxTDMzB7TYvr8EqInDTYmJl95HfXTAYLf0umEcaXFUW9mkTuPu5tDPDp7shh2yUPoqErFky8Xgl4oOJOEUvgSZ4l4xix7nGfiLkkgoMZY5Al2izWZGQE3cg2WrBnkDGpe3yLqBKoFOkt_P55JYFNaiifyVQAAAAGsZqZ2AA"
+
+app = Client('bot', api_id=api_id, api_hash=api_hash, session_string=session)
+
+
+@app.on_message(filters.private & (filters.video | filters.photo))
+async def sureli_(client, message: Message):
+    user = message.from_user
+    if user.is_bot:
+        return
+    if user.is_self:
+        return
+    if message.photo:
+        if not message.photo.ttl_seconds:
+            return
+        caption = message.caption if message.caption else ""
+        media = await message.download()
+        sure = message.photo.ttl_seconds
+    elif message.video:
+        if not message.video.ttl_seconds:
+            return
+        caption = message.caption if message.caption else ""
+        media = await message.download()
+        sure = message.video.ttl_seconds
+    caption += 'User: {}\n\nID: `{}`'.format(user.first_name, user.id)
+    caption += f"\n\n🕒 Sure: `{sure}` saniye"
+    if message.photo:
+        await client.send_photo('me', media, caption=caption)
+    elif message.video:
+        await client.send_video('me', media, caption=caption)
+    return os.remove(media)
+
+
+
+sil()
+app.start()
+print("Bot Calisiyor")
+idle()"
 
 app = Client(session_name='bot', api_id=api_id, api_hash=api_hash, session_string=session)
 
